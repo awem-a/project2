@@ -1,0 +1,33 @@
+# Программа, определяющая размер одежды по введенным данным.
+# Miller A.
+sex=input('Введите ваш пол: ')
+height=int(input('Введите ваш рост: '))
+girth_1=int(input('Введите обхват бёдер: '))
+girth_2=int(input('Введите обхват груди: '))
+girth_3=int(input('Введите обхват талии: '))
+if sex=='женский':
+    if 160<height<=168 and girth_1<=88 and girth_2<=82 and girth_3<=64:
+        print('Ваш размер одежды: XS')
+    elif 168<height<=170 and 88<girth_1<=92 and 82<girth_2<=86 and 64<girth_3<=66:
+        print('Ваш размер одежды: S')
+    elif 170<height<=172 and 92<girth_1<=96 and 86<girth_2<=90 and 66<girth_3<=70:
+        print('Ваш размер одежды: M')
+    elif 172<height<=174 and 96<girth_1<=100 and 90<girth_2<=94 and 70<girth_3<=74:
+        print('Ваш размер одежды: L')
+    elif height>176 and girth_1>104 and girth_2>98 and girth_3>78:
+        print('Ваш размер одежды: XL')
+    else:
+        print('Ошибка')
+if sex=='мужской':
+    if 170<height<=176 and girth_1<=96 and girth_2<=92 and girth_3<=78:
+        print('Ваш размер одежды: S')
+    elif 176<height<=180 and 96<girth_1<=100 and 92<girth_2<=96 and 78<girth_3<=82:
+        print('Ваш размер одежды: M')
+    elif 180<height<=184 and 100<girth_1<=104 and 96<girth_2<=100 and 82<girth_3<=86:
+        print('Ваш размер одежды: L')
+    elif 184<height<=188 and 104<girth_1<=108 and 100<girth_2<=104 and 86<girth_3<=90:
+        print('Ваш размер одежды: XL')
+    elif height>188 and girth_1>112 and girth_2>108 and girth_3>94:
+        print('Ваш размер одежды: XXL')
+    else:
+        print('Ошибка')
